@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="WpfSchoolPaper.View.Task2View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfSchoolPaper.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Margin="20" Background="LightPink">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="29"/>
+                <RowDefinition Height="auto" MinHeight="293"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock
+            Foreground="LightCoral"
+            Text="Information 4"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Padding="20,30"
+            FontSize="24"
+            FontWeight="Bold" Height="92" Width="196"
+         />
+
+            <TextBlock
+            Foreground="White"
+            Text="City:"
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            FontSize="15"
+            Margin="15,0,0,0" Height="20" Width="77" RenderTransformOrigin="0.569,-1.3"
+        />
+
+            <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" Height="60" Width="443" RenderTransformOrigin="0.505,0.265">
+
+                <TextBox Width="470" MaxLength="100" Height="62" RenderTransformOrigin="0.497,1.594" />
+            </StackPanel>
+            <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="443,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" Height="60" Width="182">
+                <TextBox Width="150" MaxLength="100" Height="60" Margin="0,0,10,0" />
+            </StackPanel>
+
+            <TextBlock
+            Foreground="White"
+            Text="Country:"
+            Grid.Row="2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10,100,0,0"
+            FontSize="15" Height="20" Width="56"
+         />
+
+            <StackPanel
+            Grid.Row="2"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" Height="292" Width="635">
+                <UIElement.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </UIElement.RenderTransform>
+                <TextBox Width="100" MaxLength="100" Height="271" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.47,0.515" HorizontalAlignment="Left" Margin="0,10,0,0" />
+            </StackPanel>
+
+            <StackPanel
+            Grid.Column="1"
+            Grid.Row="2"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center" Width="455" Height="292" VerticalAlignment="Center">
+                <RadioButton Content="Submit" Style="{StaticResource SubmitButtonTheme}" Height="298" Width="142">
+                    <UIElement.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </UIElement.RenderTransform>
+                </RadioButton>
+                <RadioButton Content="Cancel" Style="{StaticResource CancelButtonTheme}" Height="290" Width="141"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>
